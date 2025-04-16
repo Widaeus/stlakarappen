@@ -1,11 +1,11 @@
 version: '3'
+
 services:
   web:
     build: .
     container_name: stlakarappen_app
     volumes:
-      - .:/app
+      - ./app:/app
     ports:
       - "8000:8000"
-    # For development, you may use the default command from the Dockerfile.
-    # You can override it here if necessary.
+    command: python app.py
